@@ -1,0 +1,32 @@
+<h3> Different inputs </h3>
+
+<h5> 
+  Thousand Separator without decimals (can't use decimals there)
+</h5>
+<input type="text" [(ngModel)]="separatorWithoutDecimals" [mask]="'separator'" />
+<div>value - {{separatorWithoutDecimals}}</div>
+
+<hr>
+
+<h5> 
+  Thousand Separator with dot and decimals (freezes after 1 symbol) 
+</h5>
+<input type="text" [(ngModel)]="separatorWithDotDecimals" [mask]="'separator.2'" />
+<div>value - {{separatorWithDotDecimals}}</div>
+
+<hr>
+
+<h5> 
+  Thousand Separator with comma and decimals (freezes after 1 symbol) 
+</h5>
+<input type="text" [(ngModel)]="separatorWithCommaDecimals" [mask]="'separator,2'" />
+<div>value - {{separatorWithCommaDecimals}}</div>
+
+<hr>
+
+<h5> 
+  Another mask (can't use Thousand separator there) + 
+  as you can see the value is incorrect ( i assumed that last 2 symbols should be decimals, but maybe i'm wrong)
+</h5>
+<input type="text" [(ngModel)]="anotherMask" [mask]="'0*.00'" />
+<div>value - {{anotherMask}}</div>
